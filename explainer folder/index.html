@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Vintage Florida Deco Map of Protected Lands</title>
+
+        <!--my stylesheet-->
+        <link rel="stylesheet" href="css/style.css">
+        <!--scrollmap stylesheet from the class demo-->
+        <link rel="stylesheet" href="lib/scrollmap.css">
+    </head>
+
+    <body>
+        <div class="content">
+            <!--title block, background image is a screenshot of my map of Florida-->
+            <div class="row" style="background-image:url(assets/florida.png); background-size:cover;">
+                <div class="center title">
+                    <!--title text-->
+                    <h1>Vintage Florida Deco Map of Protected Lands</h1>
+                    <!--author and assignment-->
+                    <p class="author">Thomas Williams</p>
+                    <br>
+                    <p class="author">Lab 3, Assignment: Styled Tileset Challenge</p>
+                </div>
+            </div>
+            <!--intro text-->
+            <div class="row">
+                <div class="center">
+                    <p>For this map I wanted to show Florida's national and state parks, preserves, and forests in the style of old South Florida tourist prints and Miami Deco postcards.</p>
+                </div>
+            </div>
+            <!--inspiration board with text beside it-->
+            <div class="row">
+                <div class="left">
+                    <img class="fit" src="assets/inspiration-board.png" alt="My inspiration board">
+                </div>
+                <div class="right">
+                    <p class="vert-center">My inspiration board is the Little Havana postcard, the "Come to Florida" postcard, and the Turnbull citrus label. I took the flat yellow land, light blue water, pink, and bold geometric lettering from them.</p>
+                </div>
+            </div>
+            <!--spec sheet with text beside it-->
+            <div class="row">
+                <div class="left">
+                    <img class="fit" src="assets/spec-sheet.png" alt="My spec sheet">
+                </div>
+                <div class="right">
+                    <p class="vert-center">My spec sheet shows the colors, fonts, and textures I used. I kept the colors light and bright and let the dark text and roads add the contrast. Cities and roads use Jost, a Futura-style font, and parks use Bebas Neue.</p>
+                </div>
+            </div>
+
+            <!--sidecar: four protected-lands locations with text scrolling over them-->
+            <div class="scroll-container">
+                <!--background images: Everglades, Miami, Tampa Bay, Virginia Key-->
+                <div class="background-item">
+                    <img src="assets/everglades.png" alt="My map of the Everglades and Biscayne" data-slide="1" class="fill">
+                    <img src="assets/miami.png" alt="My map of Miami" data-slide="2" class="fill hidden">
+                    <img src="assets/tampa-bay.png" alt="My map of Tampa Bay" data-slide="3" class="fill hidden">
+                    <img src="assets/virginia-key.png" alt="My map of Virginia Key" data-slide="4" class="fill hidden">
+                </div>
+                <!--text for each location-->
+                <div class="foreground-item">
+                    <div class="row">
+                        <div class="center background-transparent rounded">
+                            <p class="no-margin">The Everglades and Biscayne are mostly pink, since almost all of it is protected land.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="center background-transparent rounded">
+                            <p class="no-margin">In Miami I wanted the street labels to feel like the Deco lettering on the postcards.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="center background-transparent rounded">
+                            <p class="no-margin">Around Tampa Bay you can see the small preserves tucked in between the towns.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="center background-transparent rounded">
+                            <p class="no-margin">Up close on Virginia Key you can see the pink dots and wavy water textures.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="center-wide">
+                    <!--slideshow: my map at four zoom levels, from the whole state to one island-->
+                    <div class="slideshow-container">
+                        <div class="slide">
+                            <img src="assets/florida.png" alt="My map of Florida">
+                            <p class="caption">All of Florida.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="assets/everglades.png" alt="My map of the Everglades and Biscayne">
+                            <p class="caption">The Everglades and Biscayne.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="assets/miami.png" alt="My map of Miami">
+                            <p class="caption">Miami.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="assets/virginia-key.png" alt="My map of Virginia Key">
+                            <p class="caption">Virginia Key up close.</p>
+                        </div>
+                        <!--next and previous buttons-->
+                        <a class="prev">&#10094;</a>
+                        <a class="next">&#10095;</a>
+
+                        <!--dots under the slideshow-->
+                        <div class="slideshow-dots">
+                            <span class="dot" id="1"></span>
+                            <span class="dot" id="2"></span>
+                            <span class="dot" id="3"></span>
+                            <span class="dot" id="4"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--live map from Mapbox Studio-->
+            <div class="row">
+                <div class="center-wide">
+                    <iframe class="fit" src="https://api.mapbox.com/styles/v1/dwilliams73/cmwpsa74u018301qr2wtv9i55.html?title=view&access_token=pk.eyJ1IjoiZHdpbGxpYW1zNzMiLCJhIjoiY213NXI2YzJlMDJ3bDJ6cHdvOGM2eG11ZCJ9.VZSx2iOizB1CQmJE5u2qww&zoomwheel=true&fresh=true#6/26.6/-80.9"></iframe>
+                    <p><a href="https://api.mapbox.com/styles/v1/dwilliams73/cmwpsa74u018301qr2wtv9i55.html?title=view&access_token=pk.eyJ1IjoiZHdpbGxpYW1zNzMiLCJhIjoiY213NXI2YzJlMDJ3bDJ6cHdvOGM2eG11ZCJ9.VZSx2iOizB1CQmJE5u2qww&zoomwheel=true&fresh=true#6/26.6/-80.9" target="_blank">Open the full map in a new tab</a></p>
+                </div>
+            </div>
+
+            <!--credits-->
+            <div class="row no-margin">
+                <div class="center">
+                    <div class="credits">
+                        <p><b>Credits:</b></p>
+                        <p>Map created with Mapbox Studio</p>
+                        <p>Data from OpenStreetMap</p>
+                        <p>Fonts: Jost and Bebas Neue</p>
+                        <p>Inspiration: Little Havana postcard, "Come to Florida" postcard, and Turnbull citrus label</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!--scrollmap script from the class demo-->
+        <script type="text/javascript" src="lib/scrollmap.js"></script>
+    </body>
+</html>

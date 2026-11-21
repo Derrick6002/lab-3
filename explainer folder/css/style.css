@@ -1,0 +1,10 @@
+/*font for the whole page*/
+body{
+    font-family: "Times New Roman", serif;
+    color: black;
+}
+
+/*height of the live map*/
+iframe{
+    height:400px;
+}
